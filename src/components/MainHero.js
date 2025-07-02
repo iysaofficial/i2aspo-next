@@ -27,6 +27,7 @@ export default function MainHero() {
                 priority
                 className="main-hero-img"
               />
+              {/* perubahan */}
             </div>
           </div>
         </div>
