@@ -20,7 +20,7 @@ export default function MainHero() {
             </div>
             <div className="main-hero-img-col">
               <Image
-                src="/assets/img/hero/340.png"
+                src="/assets/img/340.png"
                 alt="Hero Illustration"
                 width={750}
                 height={750}
