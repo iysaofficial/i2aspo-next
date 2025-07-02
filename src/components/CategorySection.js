@@ -37,7 +37,7 @@ const categories = [
   {
     icon: "flaticon-microphone",
     title: "Research On Children With Special Needs",
-    desc: "-",
+    desc: "This area explores ways to support and improve the development, learning, and well-being of children with special needs through inclusive and innovative approaches.",
     colorClass: "cat-red",
   },
   {
