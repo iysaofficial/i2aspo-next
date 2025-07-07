@@ -60,10 +60,10 @@ export default function Footer() {
             <a
               className="footer-link"
               target="_blank"
-              href="https://drive.google.com/file/d/1QmfxmEzTAIf2Vkzcy3bwzjVzaFTEfi7R/view?usp=sharing"
+              href="https://drive.google.com/file/d/1qbAW5-sQ_V0Lw3H-a3DopNCjT4ebtDER/view?usp=sharing"
               rel="noopener"
             >
-              <span className="footer-arrow">›</span> Guide Book I2ASPO 2024
+              <span className="footer-arrow">›</span> Guide Book 2025
             </a>
           </Link>
         </div>

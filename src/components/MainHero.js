@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MainHero() {
   return (
@@ -8,13 +9,21 @@ export default function MainHero() {
         <div className="main-hero-container">
           <div className="main-hero-row">
             <div className="main-hero-col">
-              <h1 className="main-hero-title">Indonesia International Applied Science Project Olympiad</h1>
+              <h1 className="main-hero-title">
+                Indonesia International Applied Science Project Olympiad
+              </h1>
               <div className="main-hero-btns">
+                <Link href="/registration/homeregist" legacyBehavior>
                 <a className="main-hero-btn">
-                  Segera Hadir 2025&nbsp; <span aria-hidden>→</span>
+                  Open Registration&nbsp;<span aria-hidden>→</span>
                 </a>
-                <a href="https://drive.google.com/file/d/1QmfxmEzTAIf2Vkzcy3bwzjVzaFTEfi7R/view?usp=sharing" target="_blank" className="main-hero-btn">
-                  Buku Panduan 2024 &nbsp; <span aria-hidden>→</span>
+                </Link>
+                <a
+                  href="https://drive.google.com/file/d/1qbAW5-sQ_V0Lw3H-a3DopNCjT4ebtDER/view?usp=sharing"
+                  target="_blank"
+                  className="main-hero-btn"
+                >
+                  Guide Book 2025&nbsp;<span aria-hidden>→</span>
                 </a>
               </div>
             </div>
@@ -27,7 +36,6 @@ export default function MainHero() {
                 priority
                 className="main-hero-img"
               />
-              {/* perubahan */}
             </div>
           </div>
         </div>
