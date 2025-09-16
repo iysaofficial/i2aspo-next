@@ -1,15 +1,36 @@
-import { useState } from "react";
+import { useEffect } from "react";
 
 export default function NewsletterSection() {
-  const [email, setEmail] = useState("");
+  useEffect(() => {
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbwfw1dAhzyY6p6crVCCuoEXzb_E7hBOi8cYuIBu_-JZzz2a25h-tCvT6Xd3dUH9Mx2fQA/exec";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Tambahkan logic submit newsletter di sini
-    alert("Terima kasih telah berlangganan!");
-    setEmail("");
-  };
+      const form = document.forms.namedItem("home-newsletter");
 
+      if (form) {
+      const handleSubmit = async (e) => {
+          e.preventDefault();
+          try {
+          await fetch(scriptURL, {
+              method: "POST",
+              body: new FormData(form),
+          });
+          alert("Data sent successfully!");
+          form.reset();
+          } catch (error) {
+          console.error("Error:", error);
+          alert("Failed to send data.");
+          }
+      };
+
+      form.addEventListener("submit", handleSubmit);
+
+      // cleanup listener
+      return () => {
+          form.removeEventListener("submit", handleSubmit);
+      };
+      }
+  }, []);
   return (
     <section className="newsletter-section">
       <div className="newsletter-container">
@@ -19,13 +40,12 @@ export default function NewsletterSection() {
           Get More Update
         </h2>
         <div className="newsletter-underline"></div>
-        <form className="newsletter-form" onSubmit={handleSubmit}>
+        <form className="newsletter-form" name="home-newsletter">
           <input
             type="email"
             className="newsletter-input"
             placeholder="Enter Your Email Address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="Email"
             required
           />
           <button className="newsletter-btn" type="submit">
