@@ -414,12 +414,8 @@ function IndonesiaOnline() {
                     required
                   >
                     <option value="">--Choose Grade--</option>
-                    <option value="Elementary">
-                      Elementary
-                    </option>
-                    <option value="Secondary">
-                      Secondary
-                    </option>
+                    <option value="Elementary">Elementary</option>
+                    <option value="Secondary">Secondary</option>
                     <option value="University">University</option>
                   </select>
                 </div>
@@ -552,6 +548,18 @@ function IndonesiaOnline() {
                       Research on Children with Special Needs
                     </option>
                     <option value="Entrepreneurship">Entrepreneurship</option>
+                    <option value="Applied Life Sciences">
+                      Applied Life Sciences
+                    </option>
+                    <option value="Applied Environmental Science">
+                      Applied Environmental Science
+                    </option>
+                    <option value="Applied Social Science">
+                      Applied Social Science
+                    </option>
+                    <option value="Physics and Engineering">
+                      Physics and Engineering
+                    </option>
                   </select>
                 </div>
 
@@ -658,9 +666,7 @@ function IndonesiaOnline() {
                     <option value="I2ASPO Website">I2ASPO Website</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
                     <option value="I2ASPO Instagram">I2ASPO Instagram</option>
-                    <option value="Supervisor/School">
-                      Supervisor/School
-                    </option>
+                    <option value="Supervisor/School">Supervisor/School</option>
                     <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>

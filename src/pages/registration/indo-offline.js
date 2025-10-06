@@ -64,7 +64,8 @@ function IndonesiaOffline() {
     }
   }, [router]);
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwIYArs5V7ynGWOGS5eyNRjgseeUthVOkKfUwth_XM_v-qnnjGnxBtTYsXg-PHiGOT44w/exec";
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbwIYArs5V7ynGWOGS5eyNRjgseeUthVOkKfUwth_XM_v-qnnjGnxBtTYsXg-PHiGOT44w/exec";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -551,6 +552,18 @@ function IndonesiaOffline() {
                       Research on Children with Special Needs
                     </option>
                     <option value="Entrepreneurship">Entrepreneurship</option>
+                    <option value="Applied Life Sciences">
+                      Applied Life Sciences
+                    </option>
+                    <option value="Applied Environmental Science">
+                      Applied Environmental Science
+                    </option>
+                    <option value="Applied Social Science">
+                      Applied Social Science
+                    </option>
+                    <option value="Physics and Engineering">
+                      Physics and Engineering
+                    </option>
                   </select>
                 </div>
 

@@ -589,6 +589,18 @@ export default function InternationalOnline() {
                       Research on Children with Special Needs
                     </option>
                     <option value="Entrepreneurship">Entrepreneurship</option>
+                    <option value="Applied Life Sciences">
+                      Applied Life Sciences
+                    </option>
+                    <option value="Applied Environmental Science">
+                      Applied Environmental Science
+                    </option>
+                    <option value="Applied Social Science">
+                      Applied Social Science
+                    </option>
+                    <option value="Physics and Engineering">
+                      Physics and Engineering
+                    </option>
                   </select>
                 </div>
                 <div className="input-box ">

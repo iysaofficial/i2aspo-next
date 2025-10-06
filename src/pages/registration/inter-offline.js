@@ -148,7 +148,7 @@ export default function InternationalOffline() {
 
   return (
     <>
-    <Navigation />
+      <Navigation />
       <section className="registration-section">
         <div className="container">
           <div className="content">
@@ -460,12 +460,8 @@ export default function InternationalOffline() {
                     required
                   >
                     <option value="">--Choose Grade--</option>
-                    <option value="Elementary">
-                      Elementary
-                    </option>
-                    <option value="Secondary">
-                      Secondary
-                    </option>
+                    <option value="Elementary">Elementary</option>
+                    <option value="Secondary">Secondary</option>
                     <option value="University">University</option>
                   </select>
                 </div>
@@ -505,7 +501,10 @@ export default function InternationalOffline() {
                   ></textarea>
                 </div>
                 <div className="input-box">
-                  <label for="WHATSAPP_NUMBER_SUPERVISOR" className="form-label">
+                  <label
+                    for="WHATSAPP_NUMBER_SUPERVISOR"
+                    className="form-label"
+                  >
                     Teacher/Supervisor WhatsApp Number
                     <p>
                       Please write with phone code, example : (phone code) (your
@@ -587,6 +586,18 @@ export default function InternationalOffline() {
                       Research on Children with Special Needs
                     </option>
                     <option value="Entrepreneurship">Entrepreneurship</option>
+                    <option value="Applied Life Sciences">
+                      Applied Life Sciences
+                    </option>
+                    <option value="Applied Environmental Science">
+                      Applied Environmental Science
+                    </option>
+                    <option value="Applied Social Science">
+                      Applied Social Science
+                    </option>
+                    <option value="Physics and Engineering">
+                      Physics and Engineering
+                    </option>
                   </select>
                 </div>
                 <div className="input-box">
@@ -608,7 +619,10 @@ export default function InternationalOffline() {
                   </select>
                 </div>
                 <div className="input-box">
-                  <label for="JUDUL_PERNAH_BERPATISIPASI" className="form-label">
+                  <label
+                    for="JUDUL_PERNAH_BERPATISIPASI"
+                    className="form-label"
+                  >
                     If the project title have ever participated in other
                     invention and innovation competition, please write down the
                     name of competition
