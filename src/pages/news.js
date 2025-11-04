@@ -16,7 +16,7 @@ export default function NewsPage() {
       <Navbar />
       <Breadcrumb items={[{ label: "News" }]} title="NEWS" />
       <section className="news-section">
-        <h1 className="news-title">News</h1>
+        {/* <h1 className="news-title">News</h1> */}
         <div className="news-list">
           {newsList.map((news, idx) => (
             <div className="news-card" key={idx}>

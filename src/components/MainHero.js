@@ -13,11 +13,9 @@ export default function MainHero() {
                 Indonesia International Applied Science Project Olympiad
               </h1>
               <div className="main-hero-btns">
-                <Link href="/registration/homeregist" legacyBehavior>
                 <a className="main-hero-btn">
-                  Open Registration&nbsp;<span aria-hidden>→</span>
+                  Close Registration&nbsp;<span aria-hidden>→</span>
                 </a>
-                </Link>
                 <a
                   href="https://drive.google.com/file/d/1qbAW5-sQ_V0Lw3H-a3DopNCjT4ebtDER/view?usp=sharing"
                   target="_blank"

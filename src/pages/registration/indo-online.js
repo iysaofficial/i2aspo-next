@@ -63,8 +63,10 @@ function IndonesiaOnline() {
     }
   }, [router]);
 
+  // const scriptURL =
+  //   "https://script.google.com/macros/s/AKfycbxFamPujpEpl9puJS1wv98SPfdppnDhbE3Q45sKKVenMGl4evMy4r11dViA77hE5a3Yow/exec";
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxFamPujpEpl9puJS1wv98SPfdppnDhbE3Q45sKKVenMGl4evMy4r11dViA77hE5a3Yow/exec";
+    "";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -694,7 +696,7 @@ function IndonesiaOnline() {
               {/* GENERAL INFORMATION END */}
 
               <div className="button">
-                <input type="submit" value="SUBMIT FORM" />
+                <input type="submit" value="CLOSE REGISTRATION" />
               </div>
             </form>
 
