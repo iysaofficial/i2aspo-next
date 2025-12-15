@@ -9,6 +9,11 @@ const menu = [
     label: "Certificate",
     submenu: [
       {
+        label: "Certificate for Supervisors 2025",
+        target: "_blank",
+        href: "https://drive.google.com/drive/folders/1byPQ-RILiVIBlw3WgV33cEz8uZwTSNVA?usp=sharing",
+      },
+      {
         label: "Certificate for Supervisors 2024",
         target: "_blank",
         href: "https://drive.google.com/drive/folders/13odYykW68bnfVGoEFXJ20iOJkR146j0T?usp=sharing",
