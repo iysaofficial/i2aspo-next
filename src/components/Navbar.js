@@ -9,7 +9,12 @@ const menu = [
     label: "Certificate",
     submenu: [
       {
-        label: "Certificate for Supervisors 2025",
+        label: "Certificate for Supervisors 2025 (Offline)",
+        target: "_blank",
+        href: "https://drive.google.com/drive/u/0/folders/1wDsPLrU5VXpmG1YJJwZHzfFxVYqiJcxj?usp=sharing",
+      },
+      {
+        label: "Certificate for Supervisors 2025 (Online)",
         target: "_blank",
         href: "https://drive.google.com/drive/folders/1byPQ-RILiVIBlw3WgV33cEz8uZwTSNVA?usp=sharing",
       },
