@@ -13,9 +13,9 @@ export default function MainHero() {
                 Indonesia International Applied Science Project Olympiad
               </h1>
               <div className="main-hero-btns">
-                <a className="main-hero-btn">
+                {/* <a className="main-hero-btn">
                   Close Registration&nbsp;<span aria-hidden>→</span>
-                </a>
+                </a> */}
                 <a
                   href="https://drive.google.com/file/d/1qbAW5-sQ_V0Lw3H-a3DopNCjT4ebtDER/view?usp=sharing"
                   target="_blank"
@@ -23,13 +23,13 @@ export default function MainHero() {
                 >
                   Guide Book 2025&nbsp;<span aria-hidden>→</span>
                 </a>
-                <a
+                {/* <a
                   href="https://drive.google.com/file/d/1xhm1O3RwZKEj4WFhLZHvOmqx4aJXwURB/view?usp=sharing"
                   target="_blank"
                   className="main-hero-btn"
                 >
                   Trip & Tour Package 2025&nbsp;<span aria-hidden>→</span>
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="main-hero-img-col">

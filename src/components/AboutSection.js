@@ -33,7 +33,7 @@ export default function AboutSection() {
                 that occur today.
               </p>
             </div>
-            <div className="about-desc">
+            {/* <div className="about-desc">
               <p>
                 This is the reason why IYSA collaborated with the Faculty of
                 Science and Data Analytics (FSAD) Institut Teknologi Sepuluh
@@ -43,7 +43,7 @@ export default function AboutSection() {
                 to be able to contribute to producing a product that can be used
                 by the wider community.
               </p>
-            </div>
+            </div> */}
             <Link href="/contact" legacyBehavior>
               <a className="about-btn">
                 Contact us &nbsp; →

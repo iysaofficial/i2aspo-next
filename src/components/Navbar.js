@@ -59,6 +59,11 @@ const menu = [
     label: "Gallery",
     submenu: [
       {
+        label: "Gallery 2025",
+        target: "_blank",
+        href: "https://drive.google.com/drive/folders/1HcKfSzW6rjnait8yS-W40lnH0BvxBRB5?usp=sharing",
+      },
+      {
         label: "Gallery 2024",
         target: "_blank",
         href: "https://drive.google.com/drive/folders/1OZAy_5LPSwutTivLjuhIVYRgO0ctFoSX?usp=sharing",
@@ -91,6 +96,11 @@ const menu = [
     label: "Media",
     submenu: [
       { label: "News from Media", href: "/news" },
+      {
+        label: "Press Release 2025",
+        target: "_blank",
+        href: "https://docs.google.com/document/d/1K3-tFGs6De3LFRwbgNFeVoOLNRJYidy-dXntTYth0Fk/edit?tab=t.0",
+      },
       {
         label: "Press Release 2024",
         target: "_blank",
@@ -128,7 +138,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar${scrolled ? " scrolled" : ""}`} >
+      <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <div className="navbar-logo">
           <Image
             src="/assets/img/i2aspo-head.png"
