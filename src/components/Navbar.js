@@ -29,6 +29,11 @@ const menu = [
     label: "Curation",
     submenu: [
       {
+        label: "Curation 2025",
+        target: "_blank",
+        href: "https://drive.google.com/drive/folders/1TAF1QFZffJaCWemk0vhM3NbCdlM_csA7?usp=sharing",
+      },
+      {
         label: "Curation 2024",
         target: "_blank",
         href: "https://drive.google.com/drive/folders/1VHcvXdOu62AG19pmJVkfPMqMBlAkrpT6",
