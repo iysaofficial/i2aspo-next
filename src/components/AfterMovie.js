@@ -8,7 +8,7 @@ export default function AfterMovie() {
         <iframe
           width="75%"
           height="415"
-          src="https://www.youtube.com/embed/MtxRM1dv4kM?si=u4qoobv4-q1dmgVS"
+          src="https://www.youtube.com/embed/MtxRM1dv4kM?si=ETwn54bGZPd6HIvd"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
