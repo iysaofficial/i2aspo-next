@@ -54,7 +54,7 @@ export default function Footer() {
             </a>
           </Link>
         </div>
-        <div className="footer-col">
+        {/* <div className="footer-col">
           <h4 className="footer-title">Guide Book</h4>
           <Link href="" legacyBehavior>
             <a
@@ -66,7 +66,7 @@ export default function Footer() {
               <span className="footer-arrow">›</span> Guide Book 2025
             </a>
           </Link>
-        </div>
+        </div> */}
         <div className="footer-col">
           <h4 className="footer-title">Contact Us</h4>
           <div className="footer-contact">
