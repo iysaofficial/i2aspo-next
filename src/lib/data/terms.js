@@ -86,7 +86,7 @@ export const indonesiaOfflineTerms = (
         the prizes concerned will be declared forfeited.
       </li>
       <li>
-        The committee's decision regarding this matter is final and cannot be
+        The committee&apos;s decision regarding this matter is final and cannot be
         contested.
       </li>
     </ul>
@@ -128,7 +128,7 @@ export const internationalOnlineTerms = (
       English for all required documents)
     </li>
     <li>
-      The committee's decision regarding this matter is final and cannot be
+      The committee&apos;s decision regarding this matter is final and cannot be
       contested.
     </li>
   </>
