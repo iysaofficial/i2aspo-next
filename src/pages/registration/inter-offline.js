@@ -591,11 +591,11 @@ export default function InternationalOffline() {
                     <option value="Applied Life Sciences">
                       Applied Life Sciences
                     </option>
-                    <option value="Applied Environmental Science">
-                      Applied Environmental Science
+                    <option value="Applied Environmental Sciences">
+                      Applied Environmental Sciences
                     </option>
-                    <option value="Applied Social Science">
-                      Applied Social Science
+                    <option value="Applied Social Sciences">
+                      Applied Social Sciences
                     </option>
                     <option value="Physics and Engineering">
                       Physics and Engineering

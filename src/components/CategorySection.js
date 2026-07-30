@@ -1,4 +1,5 @@
 import { FaLayerGroup, FaBullseye, FaCrown, FaMicrophone, FaMedal } from "react-icons/fa";
+import { FaAtom, FaPeopleGroup, FaLeaf, FaDna } from "react-icons/fa6";
 
 const iconMap = {
   "flaticon-layers-2": <FaLayerGroup size={48} />,
@@ -7,6 +8,10 @@ const iconMap = {
   "flaticon-crown-1": <FaCrown size={48} />,
   "flaticon-microphone": <FaMicrophone size={48} />,
   "flaticon-medal-1": <FaMedal size={48} />,
+  "flaticon-atom": <FaAtom size={48} />,
+  "flaticon-people": <FaPeopleGroup size={48} />,
+  "flaticon-leaf": <FaLeaf size={48} />,
+  "flaticon-dna": <FaDna size={48} />,
 };
 
 const categories = [
@@ -44,6 +49,30 @@ const categories = [
     icon: "flaticon-medal-1",
     title: "Entrepreneurship",
     desc: "Entrepreneurship is an act of being an entrepreneur, or 'the owner or manager of a business enterprise who, by risk and initiative, attempts to make profit'.",
+    colorClass: "cat-blue",
+  },
+  {
+    icon: "flaticon-atom",
+    title: "Physics And Engineering",
+    desc: "This field covers the study of fundamental physical principles and their application in engineering to design, build, and innovate technological solutions for real-world challenges.",
+    colorClass: "cat-purple",
+  },
+  {
+    icon: "flaticon-people",
+    title: "Applied Social Sciences",
+    desc: "Applied Social Sciences focuses on using social science theories and methods to address practical issues in society, including education, public policy, and community development.",
+    colorClass: "cat-orange",
+  },
+  {
+    icon: "flaticon-leaf",
+    title: "Applied Environmental Sciences",
+    desc: "This category explores scientific approaches to understanding and solving environmental issues such as pollution, conservation, sustainability, and climate change.",
+    colorClass: "cat-red",
+  },
+  {
+    icon: "flaticon-dna",
+    title: "Applied Life Sciences",
+    desc: "Applied Life Sciences involves the application of biology, biotechnology, and related disciplines to improve health, agriculture, and the understanding of living organisms.",
     colorClass: "cat-blue",
   },
 ];
