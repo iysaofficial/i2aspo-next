@@ -48,7 +48,7 @@ function IndonesiaOnline() {
     // Logika untuk menentukan harga berdasarkan kategori yang dipilih
     switch (value) {
       case "Indonesia International Applied Science Project Olympiad - Online Competition":
-        setCategoryPrice("RP 950.000");
+        setCategoryPrice("RP 1.150.000");
         break;
       default:
         break;
@@ -66,7 +66,7 @@ function IndonesiaOnline() {
   // const scriptURL =
   //   "https://script.google.com/macros/s/AKfycbxFamPujpEpl9puJS1wv98SPfdppnDhbE3Q45sKKVenMGl4evMy4r11dViA77hE5a3Yow/exec";
   const scriptURL =
-    "";
+    "https://script.google.com/macros/s/AKfycbxzvpTIjvNpW3EvbBoeMwUAjZGPlfNPng1AGdk3BZwKmPmkp5cY5X6O-65tBacsvEZybA/exec";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -126,11 +126,11 @@ function IndonesiaOnline() {
         setTimeout(() => {
           router.push(
             `/registration/thankyouinter?namaLengkap=${encodeURIComponent(
-              selectedMaxNamaLengkap
+              selectedMaxNamaLengkap,
             )}
             &projectTitle=${encodeURIComponent(selectedMaxProject)}
             &category=${encodeURIComponent(selectedCategory)}
-            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`
+            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`,
           );
         }, 1000);
       } else {
@@ -154,7 +154,7 @@ function IndonesiaOnline() {
             <br />
             <br />
             <h4>
-              HELLO I2ASPO 2025 PARTICIPANTS, Please consider the following
+              HELLO I2ASPO 2026 PARTICIPANTS, Please consider the following
               information before filling out the registration form :
             </h4>
             <br />
@@ -201,8 +201,8 @@ function IndonesiaOnline() {
                       {isLoading
                         ? "Submitting..."
                         : canClick
-                        ? "Continue"
-                        : `Please wait... ${countdown}`}
+                          ? "Continue"
+                          : `Please wait... ${countdown}`}
                     </button>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ function IndonesiaOnline() {
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
                     <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Zaidan Adi Prasetya</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea
@@ -652,7 +652,7 @@ function IndonesiaOnline() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    I2ASPO 2025 Competition Information Resources
+                    I2ASPO 2026 Competition Information Resources
                   </label>
                   <select
                     type="text"
@@ -681,7 +681,8 @@ function IndonesiaOnline() {
                 <div className="input-box">
                   <label for="FILE" className="form-label">
                     If you received free registration from a previous event or
-                    school visit activity, please attach documentary evidence.{" "}
+                    school visit activity, please attach documentary
+                    evidence.{" "}
                   </label>
                   <input
                     type="url"
@@ -696,7 +697,7 @@ function IndonesiaOnline() {
               {/* GENERAL INFORMATION END */}
 
               <div className="button">
-                <input type="submit" value="CLOSE REGISTRATION" />
+                <input type="submit" value="SUBMIT FORM" />
               </div>
             </form>
 

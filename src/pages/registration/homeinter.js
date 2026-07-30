@@ -1,4 +1,7 @@
-import { internationalOfflineTerms, internationalOnlineTerms } from "../../lib/data/terms";
+import {
+  internationalOfflineTerms,
+  internationalOnlineTerms,
+} from "../../lib/data/terms";
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -24,7 +27,7 @@ function HomeInter() {
       alert("Please agree to the Terms & Conditions to proceed.");
     }
   };
-  
+
   useEffect(() => {
     const hasAcceptedTerms = sessionStorage.getItem("termsAccepted");
     if (hasAcceptedTerms === "true") {
@@ -34,7 +37,7 @@ function HomeInter() {
 
   return (
     <>
-    <Navigation />
+      <Navigation />
       <section className="homeregist-section">
         <div>
           <div className="wrapper">
@@ -43,12 +46,34 @@ function HomeInter() {
                 REGISTRATION FORM FOR INTERNATIONAL PARTICIPANTS
               </h1>
               <h3 className="mx-auto mt-5 mb-2 text-sm md:text-lg lg:text-2xl">
-                Choose Categories Competition for Registration I2ASPO 2025
+                Choose Categories Competition for Registration I2ASPO 2026
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center">
             <a
+              onClick={() =>
+                handleOpenModal(
+                  "/registration/inter-online",
+                  internationalOnlineTerms,
+                )
+              }
+              className="btn btn-action text-center me-lg-5"
+            >
+              Online Competition <i className="fa-solid fa-earth-americas"></i>
+            </a>
+            <a
+              className="btn btn-action text-center me-lg-5"
+              onClick={() =>
+                handleOpenModal(
+                  "/registration/inter-offline",
+                  internationalOfflineTerms,
+                )
+              }
+            >
+              Offline Competition <i className="fa-solid fa-earth-americas"></i>
+            </a>
+            {/* <a
               className="btn btn-action text-center me-lg-5"
             >
               CLOSE REGISTRATION{" "}<i className="fa-solid fa-earth-americas"></i>
@@ -58,7 +83,7 @@ function HomeInter() {
             >
               CLOSE REGISTRATION{" "}
               <i className="fa-solid fa-earth-americas"></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

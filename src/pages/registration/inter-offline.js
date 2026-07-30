@@ -49,9 +49,9 @@ export default function InternationalOffline() {
     switch (value) {
       case "Indonesia International Applied Science Project Olympiad - Offline Competition":
         break;
-      case "Indonesia International Applied Science Project Olympiad - Offline Competition + Full Package":
-        break;
       case "Indonesia International Applied Science Project Olympiad - Offline Competition + Excursion":
+        break;
+      case "Indonesia International Applied Science Project Olympiad - Offline Competition + Full Package":
         break;
       default:
         setCategoryPrice("");
@@ -71,7 +71,7 @@ export default function InternationalOffline() {
   // const scriptURL =
   //   "https://script.google.com/macros/s/AKfycby1nd81DyrEMIOqh13Cm48mgnI3f9kwNQr3jHcFI05hL4HH8rouPFNAc3ovb4Kbs5W7UQ/exec";
   const scriptURL =
-    "";
+    "https://script.google.com/macros/s/AKfycbxFxJiab4bf4bRgWhx4UO_CkEeTXel4ZijZblXQSdGG1byhYnnhz03mfoCdkFtwBnqolA/exec";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -131,11 +131,11 @@ export default function InternationalOffline() {
         setTimeout(() => {
           router.push(
             `/registration/thankyouinter?namaLengkap=${encodeURIComponent(
-              selectedMaxNamaLengkap
+              selectedMaxNamaLengkap,
             )}
             &projectTitle=${encodeURIComponent(selectedMaxProject)}
             &category=${encodeURIComponent(selectedCategory)}
-            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`
+            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`,
           );
         }, 1000);
       } else {
@@ -159,7 +159,7 @@ export default function InternationalOffline() {
             <br />
             <br />
             <h4>
-              HELLO I2ASPO 2025 PARTICIPANTS, Please consider the following
+              HELLO I2ASPO 2026 PARTICIPANTS, Please consider the following
               information before filling out the registration form :
             </h4>
             <br />
@@ -207,8 +207,8 @@ export default function InternationalOffline() {
                       {isLoading
                         ? "Submitting..."
                         : canClick
-                        ? "Continue"
-                        : `Please wait... ${countdown}`}
+                          ? "Continue"
+                          : `Please wait... ${countdown}`}
                     </button>
                   </div>
                 </div>
@@ -254,11 +254,11 @@ export default function InternationalOffline() {
                     <option value="Indonesia International Applied Science Project Olympiad - Offline Competition">
                       Offline Competition
                     </option>
-                    <option value="Indonesia International Applied Science Project Olympiad - Offline Competition + Full Package">
-                      Offline Competition + Full Package
-                    </option>
                     <option value="Indonesia International Applied Science Project Olympiad - Offline Competition + Excursion">
                       Offline Competition + Excursion
+                    </option>
+                    <option value="Indonesia International Applied Science Project Olympiad - Offline Competition + Full Package">
+                      Offline Competition + Full Package
                     </option>
                   </select>
                 </div>
@@ -277,7 +277,7 @@ export default function InternationalOffline() {
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
                     <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Zaidan Adi Prasetya</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea
@@ -673,7 +673,7 @@ export default function InternationalOffline() {
 
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    I2ASPO 2025 Competition Information Resources
+                    I2ASPO 2026 Competition Information Resources
                   </label>
                   <select
                     type="text"
@@ -701,7 +701,7 @@ export default function InternationalOffline() {
                 </div>
               </div>
               <div className="button">
-                <input type="submit" value="CLOSE REGISTRATION" />
+                <input type="submit" value="SUBMIT FORM" />
               </div>
             </form>
 

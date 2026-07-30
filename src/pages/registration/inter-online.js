@@ -47,13 +47,13 @@ export default function InternationalOnline() {
     // Logika untuk menentukan harga berdasarkan kategori yang dipilih
     switch (value) {
       case "Indonesia International Applied Science Project Olympiad - Online Competition":
-        setCategoryPrice("$75 USD");
+        setCategoryPrice("$85 USD");
         break;
       case "Indonesia International Applied Science Project Olympiad - Online Competition + Certificate and Medal (SOUTH EAST ASIA ONLY)":
-        setCategoryPrice("$200 USD");
+        setCategoryPrice("$225 USD");
         break;
       case "Indonesia International Applied Science Project Olympiad - Online Competition + Certificate and Medal (Exclude SOUTH EAST ASIA)":
-        setCategoryPrice("$250 USD");
+        setCategoryPrice("$275 USD");
         break;
       default:
         setCategoryPrice("");
@@ -71,7 +71,7 @@ export default function InternationalOnline() {
   }, [router]);
 
   const scriptURL =
-    "";
+    "https://script.google.com/macros/s/AKfycbx5y7iZUpLJgYgQ_bfxrZzO_IPRmgIzEpCN8DeDrTcPudVJLtqwiqP9aY1uXLEms54Lxg/exec";
   // const scriptURL =
   //   "https://script.google.com/macros/s/AKfycbyoQ9YBXiLSj2EALI3LTVN3arGKBpCSZnfSZu2tatlp0VNjh-KrUFFrGaznp5HMW1e7xg/exec";
 
@@ -133,11 +133,11 @@ export default function InternationalOnline() {
         setTimeout(() => {
           router.push(
             `/registration/thankyouinter?namaLengkap=${encodeURIComponent(
-              selectedMaxNamaLengkap
+              selectedMaxNamaLengkap,
             )}
             &projectTitle=${encodeURIComponent(selectedMaxProject)}
             &category=${encodeURIComponent(selectedCategory)}
-            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`
+            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`,
           );
         }, 1000);
       } else {
@@ -161,7 +161,7 @@ export default function InternationalOnline() {
             <br />
             <br />
             <h4>
-              HELLO I2ASPO 2025 PARTICIPANTS, Please consider the following
+              HELLO I2ASPO 2026 PARTICIPANTS, Please consider the following
               information before filling out the registration form :
             </h4>
             <br />
@@ -209,8 +209,8 @@ export default function InternationalOnline() {
                       {isLoading
                         ? "Submitting..."
                         : canClick
-                        ? "Continue"
-                        : `Please wait... ${countdown}`}
+                          ? "Continue"
+                          : `Please wait... ${countdown}`}
                     </button>
                   </div>
                 </div>
@@ -277,7 +277,7 @@ export default function InternationalOnline() {
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
                     <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Zaidan Adi Prasetya</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea
@@ -692,7 +692,7 @@ export default function InternationalOnline() {
 
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    I2ASPO 2025 Competition Information Resources
+                    I2ASPO 2026 Competition Information Resources
                   </label>
                   <select
                     type="text"
@@ -720,7 +720,7 @@ export default function InternationalOnline() {
                 </div>
               </div>
               <div className="button">
-                <input type="submit" value="CLOSE REGISTRATION" />
+                <input type="submit" value="SUBMIT FORM" />
               </div>
             </form>
 

@@ -5,6 +5,67 @@ export default function AboutSection() {
   return (
     <>
       <section className="about-section">
+        <div
+          className="mb-5 mt-4"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            width: "100%",
+          }}
+        >
+          <h5
+            style={{
+              fontWeight: "bold",
+              color: "#6c757d",
+              marginBottom: "20px",
+              fontSize: "2.25rem",
+            }}
+          >
+            Organized by :
+          </h5>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                gap: "30px",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <Image
+                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/logo%20IYSA%20bagus%20(1).png"
+                alt="Logo 1"
+                width={600}
+                height={160}
+                style={{ objectFit: "contain" }}
+              />
+              <Image
+                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/Logo%20Tengah%20block%20SV%20UGM%20biru%20lock-up%20(1).png"
+                alt="Logo 2"
+                width={600}
+                height={130}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <Image
+              src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/prospera%20creative.png"
+              alt="Logo 3"
+              width={900}
+              height={400}
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        </div>
         <div className="about-container">
           <div className="about-illustration-col">
             <Image
@@ -45,9 +106,7 @@ export default function AboutSection() {
               </p>
             </div> */}
             <Link href="/contact" legacyBehavior>
-              <a className="about-btn">
-                Contact us &nbsp; →
-              </a>
+              <a className="about-btn">Contact us &nbsp; →</a>
             </Link>
           </div>
         </div>

@@ -45,21 +45,39 @@ function HomeIndo() {
                 REGISTRATION FORM FOR INDONESIA PARTICIPANTS
               </h1>
               <h3 className="mx-auto mt-5 mb-2 text-sm md:text-lg lg:text-2xl">
-                Choose Categories Competition for Registration I2ASPO 2025
+                Choose Categories Competition for Registration I2ASPO 2026
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center">
             <a
-              className="btn btn-action text-center me-lg-5 " 
-            >
-              CLOSE REGISTRATION<i className="fa-solid fa-earth-americas"></i>
-            </a>
-            <a
+              onClick={() =>
+                handleOpenModal(
+                  "/registration/indo-online",
+                  indonesiaOnlineTerms,
+                )
+              }
               className="btn btn-action text-center me-lg-5 "
             >
+              Online Competition<i className="fa-solid fa-earth-americas"></i>
+            </a>
+            <a
+              onClick={() =>
+                handleOpenModal(
+                  "/registration/indo-offline",
+                  indonesiaOfflineTerms,
+                )
+              }
+              className="btn btn-action text-center me-lg-5 "
+            >
+              Offline Competition<i className="fa-solid fa-earth-americas"></i>
+            </a>
+            {/* <a className="btn btn-action text-center me-lg-5 ">
               CLOSE REGISTRATION<i className="fa-solid fa-earth-americas"></i>
             </a>
+            <a className="btn btn-action text-center me-lg-5 ">
+              CLOSE REGISTRATION<i className="fa-solid fa-earth-americas"></i>
+            </a> */}
           </div>
         </div>
       </section>

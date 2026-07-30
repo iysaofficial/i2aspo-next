@@ -12,6 +12,7 @@ function IndonesiaOffline() {
   const maxSchoolChars = 500; // batasan maksimal karakter
   const maxProjectChars = 160; // batasan maksimal karakter
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [categoryPrice, setCategoryPrice] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -47,12 +48,13 @@ function IndonesiaOffline() {
     // Logika untuk menentukan harga berdasarkan kategori yang dipilih
     switch (value) {
       case "Indonesia International Applied Science Project Olympiad - Offline Competition":
+        setCategoryPrice("Rp. 3.150.000");
         break;
       case "Indonesia International Applied Science Project Olympiad - Offline Competition + Excursion":
-        break;
-      case "Indonesia International Applied Science Project Olympiad - Offline Competition + Fullpackage":
+        setCategoryPrice("");
         break;
       default:
+        setCategoryPrice("");
         break;
     }
   };
@@ -67,7 +69,7 @@ function IndonesiaOffline() {
   }, [router]);
 
   const scriptURL =
-    "";
+    "https://script.google.com/macros/s/AKfycbyKGwUYkAbc11SEJm1zEVLZG7i3Cx2eJvJjiUJIFGdHFlmeO6H-HqjfADwSsx_bJWT_AA/exec";
   // const scriptURL =
   //   "https://script.google.com/macros/s/AKfycbwIYArs5V7ynGWOGS5eyNRjgseeUthVOkKfUwth_XM_v-qnnjGnxBtTYsXg-PHiGOT44w/exec";
 
@@ -127,11 +129,11 @@ function IndonesiaOffline() {
         setTimeout(() => {
           router.push(
             `/registration/thankyouinter?namaLengkap=${encodeURIComponent(
-              selectedMaxNamaLengkap
+              selectedMaxNamaLengkap,
             )}
             &projectTitle=${encodeURIComponent(selectedMaxProject)}
             &category=${encodeURIComponent(selectedCategory)}
-            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`
+            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`,
           );
         }, 1000);
       } else {
@@ -155,7 +157,7 @@ function IndonesiaOffline() {
             <br />
             <br />
             <h4>
-              HELLO I2ASPO 2025 PARTICIPANTS, Please consider the following
+              HELLO I2ASPO 2026 PARTICIPANTS, Please consider the following
               information before filling out the registration form :
             </h4>
             <br />
@@ -201,8 +203,8 @@ function IndonesiaOffline() {
                       {isLoading
                         ? "Submitting..."
                         : canClick
-                        ? "Continue"
-                        : `Please wait... ${countdown}`}
+                          ? "Continue"
+                          : `Please wait... ${countdown}`}
                     </button>
                   </div>
                 </div>
@@ -247,9 +249,6 @@ function IndonesiaOffline() {
                     <option value="Indonesia International Applied Science Project Olympiad - Offline Competition + Excursion">
                       Offline Competition + Excursion
                     </option>
-                    <option value="Indonesia International Applied Science Project Olympiad - Offline Competition + Fullpackage">
-                      Offline Competition + Fullpackage
-                    </option>
                   </select>
                 </div>
               </div>
@@ -267,7 +266,7 @@ function IndonesiaOffline() {
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
                     <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Zaidan Adi Prasetya</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea
@@ -608,6 +607,21 @@ function IndonesiaOffline() {
                   ></textarea>
                   <div className="mt-5" id="form_alerts"></div>
                 </div>
+                {/* Kolom Harga */}
+                <div className="input-box invisible">
+                  <label htmlFor="CATEGORY_PRICE" className="form-label ">
+                    Registration Price
+                  </label>
+                  <input
+                    type="text"
+                    id="CATEGORY_PRICE"
+                    name="CATEGORY_PRICE"
+                    className="form-control"
+                    value={categoryPrice}
+                    readOnly
+                    placeholder="Harga akan muncul berdasarkan kategori yang dipilih"
+                  />
+                </div>
               </div>
               {/* DETAIL PROJECT END */}
               {/* DETAIL PROJECT END */}
@@ -643,7 +657,7 @@ function IndonesiaOffline() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    I2ASPO 2025 Competition Information Resources
+                    I2ASPO 2026 Competition Information Resources
                   </label>
                   <select
                     type="text"
@@ -672,7 +686,8 @@ function IndonesiaOffline() {
                 <div className="input-box">
                   <label for="FILE" className="form-label">
                     If you received free registration from a previous event or
-                    school visit activity, please attach documentary evidence.{" "}
+                    school visit activity, please attach documentary
+                    evidence.{" "}
                   </label>
                   <input
                     type="url"
@@ -687,7 +702,7 @@ function IndonesiaOffline() {
               {/* GENERAL INFORMATION END */}
 
               <div className="button">
-                <input type="submit" value="CLOSE REGISTRATION" />
+                <input type="submit" value="SUBMIT FORM" />
               </div>
             </form>
             {/* Loader dan Status Message */}

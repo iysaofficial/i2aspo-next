@@ -12,7 +12,7 @@ export default function homeregist() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation/>
+      <Navigation />
       <section className="homeregist-section">
         <div>
           <div className="wrapper">
@@ -21,15 +21,13 @@ export default function homeregist() {
                 REGISTRATION FORM
               </h1>
               <h3 className="mx-auto mt-5 mb-2 text-sm md:text-lg lg:text-2xl">
-                Choose Categories Participant for Registration I2ASPO 2025
+                Choose Categories Participant for Registration I2ASPO 2026
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center">
             <Link href="/registration/homeindo" legacyBehavior>
-              <a
-                className="btn btn-action text-center me-lg-5 m-2"
-              >
+              <a className="btn btn-action text-center me-lg-5 m-2">
                 Indonesia Participant{" "}
                 <i className="fa-solid fa-earth-americas"></i>
               </a>

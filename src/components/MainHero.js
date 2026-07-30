@@ -13,17 +13,20 @@ export default function MainHero() {
                 Indonesia International Applied Science Project Olympiad
               </h1>
               <div className="main-hero-btns">
-                <a className="main-hero-btn">
-                  Coming Soon 2026&nbsp;<span aria-hidden>→</span>
+                <a href="registration/homeregist" className="main-hero-btn">
+                  Registration Here !&nbsp;<span aria-hidden>→</span>
                 </a>
-                {/* <a
-                  href="https://drive.google.com/file/d/1qbAW5-sQ_V0Lw3H-a3DopNCjT4ebtDER/view?usp=sharing"
+                {/* <a className="main-hero-btn">
+                  Coming Soon 2026&nbsp;<span aria-hidden>→</span>
+                </a> */}
+                <a
+                  href="https://drive.google.com/drive/folders/1DADiqHJT_I9OH9LFaT1J65Mo2zBsW9Hb?usp=sharing"
                   target="_blank"
                   className="main-hero-btn"
                 >
-                  Guide Book 2025&nbsp;<span aria-hidden>→</span>
+                  Guide Book 2026&nbsp;<span aria-hidden>→</span>
                 </a>
-                <a
+                {/* <a
                   href="https://drive.google.com/file/d/1xhm1O3RwZKEj4WFhLZHvOmqx4aJXwURB/view?usp=sharing"
                   target="_blank"
                   className="main-hero-btn"
