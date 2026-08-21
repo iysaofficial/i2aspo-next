@@ -6,6 +6,36 @@ const menu = [
   { label: "Home", href: "/" },
   { label: "List of Winner", href: "/daftarpemenang/daftar-pemenang" },
   {
+    label: "Guide Book",
+    submenu: [
+      {
+        label: "Guide Book 2025",
+        target: "_blank",
+        href: "https://drive.google.com/file/d/1qbAW5-sQ_V0Lw3H-a3DopNCjT4ebtDER/view?usp=sharing",
+      },
+      {
+        label: "Guide Book 2024",
+        target: "_blank",
+        href: "https://drive.google.com/file/d/1klhgu_8maKEA5eJFZ4cNRq7B36hhQGsI/view?usp=sharing",
+      },
+      {
+        label: "Guide Book 2023",
+        target: "_blank",
+        href: "https://drive.google.com/file/d/1If_IzDI0MfRbzJXj3vh7gzOugWu0vQq_/view?usp=sharing",
+      },
+      {
+        label: "Guide Book 2022",
+        target: "_blank",
+        href: "https://drive.google.com/file/d/11Dub9co2Zn0PyBJr7GXiOGJeDqrtq6RZ/view?usp=sharing",
+      },
+      {
+        label: "Guide Book 2021",
+        target: "_blank",
+        href: "https://drive.google.com/file/d/1DNo0sj-23mOzZt0DLnAnqfwlGzPnDsml/view?usp=sharing",
+      },
+    ],
+  },
+  {
     label: "Certificate",
     submenu: [
       {
