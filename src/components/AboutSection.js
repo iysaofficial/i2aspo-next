@@ -43,7 +43,7 @@ export default function AboutSection() {
               }}
             >
               <Image
-                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/logo%20IYSA%20bagus%20(1).png"
+                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/LOGO%20IYSA%20FIX.png?updatedAt=1789015525405"
                 alt="Logo 1"
                 width={600}
                 height={160}
