@@ -18,6 +18,7 @@ export default function InternationalOffline() {
   const [showModal, setShowModal] = useState(false);
   const [countdown, setCountdown] = useState(5);
   const [canClick, setCanClick] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter(); // React Router hook untuk navigasi
 
   const handleInputNameChange = (e) => {
@@ -77,14 +78,17 @@ export default function InternationalOffline() {
     const form = document.forms["regist-form"];
 
     if (form) {
+      let interval = null;
       const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
         setShowModal(true);
         setCanClick(false);
         setCountdown(5); // Set ulang countdown saat modal muncul
 
         let count = 5;
-        const interval = setInterval(() => {
+        if (interval) clearInterval(interval);
+        interval = setInterval(() => {
           count -= 1;
           setCountdown(count);
 
@@ -97,55 +101,49 @@ export default function InternationalOffline() {
 
       form.addEventListener("submit", handleSubmit);
       return () => {
+        if (interval) clearInterval(interval);
         form.removeEventListener("submit", handleSubmit);
       };
     }
-  }, []);
+  }, [isSubmitting]);
 
-  const handleConfirmSubmit = async () => {
+  const handleConfirmSubmit = () => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
     setShowModal(false); // Tutup modal
     const form = document.forms["regist-form"];
 
     if (!form) return;
 
-    setIsLoading(true);
+    // Kirim data ke Google Apps Script di background
     try {
-      const response = await fetch(scriptURL, {
+      fetch(scriptURL, {
         method: "POST",
         body: new FormData(form),
+        mode: "no-cors",
+        keepalive: true,
+      }).catch((error) => {
+        console.error("Error sending form data:", error);
       });
-
-      if (response.ok) {
-        setStatusMessage("Data sent successfully!");
-
-        // Ambil data sebelum reset
-        const formData = {
-          namaLengkap: selectedMaxNamaLengkap,
-          projectTitle: selectedMaxProject,
-          category: selectedCategory,
-          categoryPrice: categoryPrice,
-          namasekolah: selectedNamaSekolah,
-        };
-
-        form.reset();
-        setTimeout(() => {
-          router.push(
-            `/registration/thankyouinter?namaLengkap=${encodeURIComponent(
-              selectedMaxNamaLengkap,
-            )}
-            &projectTitle=${encodeURIComponent(selectedMaxProject)}
-            &category=${encodeURIComponent(selectedCategory)}
-            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`,
-          );
-        }, 1000);
-      } else {
-        setStatusMessage("An error occurred while sending data.");
-      }
     } catch (error) {
-      setStatusMessage("An error occurred while sending data.");
-    } finally {
-      setIsLoading(false);
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+        mode: "no-cors",
+      }).catch((err) => {
+        console.error("Error sending form data:", err);
+      });
     }
+
+    // Langsung redirect ke halaman thankyouinter tanpa menunggu loading selesai
+    const params = new URLSearchParams({
+      namaLengkap: selectedMaxNamaLengkap || "",
+      projectTitle: selectedMaxProject || "",
+      category: selectedCategory || "",
+      namasekolah: selectedNamaSekolah || "",
+    });
+
+    router.push(`/registration/thankyouinter?${params.toString()}`);
   };
 
   return (
@@ -199,13 +197,20 @@ export default function InternationalOffline() {
                   </p>
 
                   <div className="modal-buttons-submit">
-                    <button onClick={() => setShowModal(false)}>Back</button>
                     <button
-                      onClick={handleConfirmSubmit}
-                      disabled={!canClick || isLoading}
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                      disabled={isSubmitting}
                     >
-                      {isLoading
-                        ? "Submitting..."
+                      Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleConfirmSubmit}
+                      disabled={!canClick || isSubmitting}
+                    >
+                      {isSubmitting
+                        ? "Processing..."
                         : canClick
                           ? "Continue"
                           : `Please wait... ${countdown}`}
@@ -701,7 +706,11 @@ export default function InternationalOffline() {
                 </div>
               </div>
               <div className="button">
-                <input type="submit" value="SUBMIT FORM" />
+                <input
+                  type="submit"
+                  value={isSubmitting ? "PROCESSING..." : "SUBMIT FORM"}
+                  disabled={isSubmitting}
+                />
               </div>
             </form>
 
