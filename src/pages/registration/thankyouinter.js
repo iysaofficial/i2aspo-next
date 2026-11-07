@@ -54,9 +54,7 @@ function Thankyouinter() {
           </strong>
         </p>
         <Link href="/registration/homeregist" legacyBehavior>
-          <a className="btn btn-action">
-            Back to Registration Menu
-          </a>
+          <a className="btn btn-action">Back to Registration Menu</a>
         </Link>
       </div>
     </section>

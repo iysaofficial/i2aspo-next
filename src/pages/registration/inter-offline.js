@@ -70,9 +70,8 @@ export default function InternationalOffline() {
   }, [router]);
 
   // const scriptURL =
-  //   "https://script.google.com/macros/s/AKfycby1nd81DyrEMIOqh13Cm48mgnI3f9kwNQr3jHcFI05hL4HH8rouPFNAc3ovb4Kbs5W7UQ/exec";
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxFxJiab4bf4bRgWhx4UO_CkEeTXel4ZijZblXQSdGG1byhYnnhz03mfoCdkFtwBnqolA/exec";
+  //   "https://script.google.com/macros/s/AKfycbxFxJiab4bf4bRgWhx4UO_CkEeTXel4ZijZblXQSdGG1byhYnnhz03mfoCdkFtwBnqolA/exec";
+  const scriptURL = "";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -706,11 +705,12 @@ export default function InternationalOffline() {
                 </div>
               </div>
               <div className="button">
-                <input
+                {/* <input
                   type="submit"
                   value={isSubmitting ? "PROCESSING..." : "SUBMIT FORM"}
                   disabled={isSubmitting}
-                />
+                /> */}
+                <input type="submit" value="CLOSE REGISTRATION" disabled />
               </div>
             </form>
 

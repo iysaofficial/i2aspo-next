@@ -50,7 +50,7 @@ function HomeIndo() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <a
+            {/* <a
               onClick={() =>
                 handleOpenModal(
                   "/registration/indo-online",
@@ -71,13 +71,13 @@ function HomeIndo() {
               className="btn btn-action text-center me-lg-5 "
             >
               Offline Competition<i className="fa-solid fa-earth-americas"></i>
-            </a>
-            {/* <a className="btn btn-action text-center me-lg-5 ">
+            </a> */}
+            <a className="btn btn-action text-center me-lg-5 ">
               CLOSE REGISTRATION<i className="fa-solid fa-earth-americas"></i>
             </a>
             <a className="btn btn-action text-center me-lg-5 ">
               CLOSE REGISTRATION<i className="fa-solid fa-earth-americas"></i>
-            </a> */}
+            </a>
           </div>
         </div>
       </section>
